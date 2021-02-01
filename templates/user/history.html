@@ -1,0 +1,31 @@
+
+
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+<body> 
+<form method="get" action="">
+<table width="500" height="100" border="2" bordercolor="#000000" class="table table-bordered">
+    <thead class="thead-light">
+    <tr>
+      <th><font color="black">Date</font></th>
+        <th><font color="black">Song</font></th>
+        <th><font color="black">Gener</font></th>
+    <th>&nbsp;</th>
+  </tr>
+    </thead>
+    {% for i in data %}
+
+  <tr>
+    <td>{{ i['created_at'] }}</td>
+    <td>&nbsp;{{ i['song_file'] }}</td>
+    <td>{{ i['status'] }}</td>
+
+      <td> <button type="button" class="btn btn-danger" style="padding: 4px 24px;"> <a href="/d_history/{{ i['song_id'] }}"><font color="white">Remove</font> </a> </button> </td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}
+

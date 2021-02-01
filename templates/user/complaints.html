@@ -1,0 +1,30 @@
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+<body>
+<form action="/user_cmplt_post" method="post">
+
+  <div align="center">
+<table width="500" height="100" border="0" bordercolor="#000000" class="table table-borderless" >
+    <thead class="thead-light">
+    <tr>
+        <td width="154"><strong><font color="black">Subject</font></strong></td>
+        <td width="418"><input type="text" name="subject" id="subject" required /></td>
+      </tr>
+    </thead>
+      <tr>
+        <td><strong>Complaint</strong></td>
+        <td><textarea name="cmp" id="cmp" cols="45" rows="5" required ></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><div align="center">
+          <input type="submit" name="send" id="send" value="Send" class="btn btn-success" style="padding: 4px 30px; background-color: #008CBA;" />
+        </div></td>
+      </tr>
+  </table>
+  </div>
+
+
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+
+<form action="" method="get">
+<table width="500" height="100" border="2" bordercolor="#000000" class="table table-bordered">
+    <thead class="thead-light">
+  <tr>
+      <th><font color="black">Date</font></th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Complaint</th>
+    <th>Reply</th>
+
+  </tr>
+    </thead>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ i['created_at'] }}</td>
+    <td>&nbsp;{{ i['fname'] }}</td>
+    <td>&nbsp;{{ i['email'] }}</td>
+    <td>{{ i['subject'] }}</td>
+    <td>{{ i['complaint'] }}</td>
+    <td>
+        {% if i['status']=='pending' %}
+            <button type="button" class="btn btn-success" style="padding: 4px 30px; background-color: #008CBA;"> <a href="/reply/{{ i['c_id'] }}"><font color="white">Reply</font></a></button>
+           {% else %}
+              {{ i['reply'] }}
+         {% endif %}
+    </td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+
+{% endblock %}

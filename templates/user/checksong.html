@@ -1,0 +1,183 @@
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+<body>
+<form action="song_post" method="post" enctype="multipart/form-data">
+
+
+  <div align="center">
+<table width="500" height="100" border="0" bordercolor="#000000" class="table table-borderless">
+    <thead class="thead-light">
+    <tr>
+        <td><font color="black"><strong>Song</strong></font></td>
+        <td><input type="file" name="song" id="song" required /></td>
+      </tr>
+    </thead>
+      <tr>
+        <td colspan="2"><div align="center">
+          <input type="submit" name="Check" id="Check" value="Check" class="btn btn-success" style="padding: 4px 40px;" />
+        </div></td>
+      </tr>
+  </table>
+  </div>
+
+  <!--  {% if p %}
+
+        <h1>Features</h1>
+
+        <table class="table table-bordered">
+        <tr>
+            <td>Chrome stft</td>
+            <td>{{ toappend[0] }}</td>
+        </tr>
+
+         <tr>
+            <td>spectral_centroid</td>
+            <td>{{ toappend[1] }}</td>
+        </tr>
+
+        <tr>
+            <td>spectral_bandwidth</td>
+            <td>{{ toappend[2] }}</td>
+        </tr>
+
+        <tr>
+            <td>rolloff</td>
+            <td>{{ toappend[3] }}</td>
+        </tr>
+        <tr>
+            <td>zero_crossing_rate</td>
+            <td>{{ toappend[4] }}</td>
+        </tr>
+        <tr>
+            <td>Mfcc1</td>
+            <td>{{ toappend[5] }}</td>
+        </tr>
+
+        <tr>
+            <td>Mfcc2</td>
+            <td>{{ toappend[6] }}</td>
+        </tr>
+
+
+        <tr>
+            <td>Mfcc3</td>
+            <td>{{ toappend[7] }}</td>
+        </tr>
+
+
+        <tr>
+            <td>Mfcc4</td>
+            <td>{{ toappend[8] }}</td>
+        </tr>
+            <tr>
+            <td>Mfcc5</td>
+            <td>{{ toappend[9] }}</td>
+        </tr>
+            <tr>
+            <td>Mfcc6</td>
+            <td>{{ toappend[10] }}</td>
+        </tr>
+
+         <tr>
+            <td>Mfcc7</td>
+            <td>{{ toappend[11] }}</td>
+        </tr>
+
+         <tr>
+            <td>Mfcc8</td>
+            <td>{{ toappend[12] }}</td>
+        </tr>
+            <tr>
+            <td>Mfcc9</td>
+            <td>{{ toappend[13] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc10</td>
+            <td>{{ toappend[14] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc11</td>
+            <td>{{ toappend[15] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc12</td>
+            <td>{{ toappend[16] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc13</td>
+            <td>{{ toappend[17] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc14</td>
+            <td>{{ toappend[18] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc15</td>
+            <td>{{ toappend[19] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc16</td>
+            <td>{{ toappend[20] }}</td>
+        </tr>
+         <tr>
+            <td>Mfcc17</td>
+            <td>{{ toappend[21] }}</td>
+        </tr>
+            <tr>
+            <td>Mfcc18</td>
+            <td>{{ toappend[22] }}</td>
+            </tr>
+            <tr>
+            <td>Mfcc19</td>
+            <td>{{ toappend[23] }}</td>
+            </tr>
+            <tr>
+            <td>Mfcc20</td>
+            <td>{{ toappend[24] }}</td>
+            </tr>
+
+
+
+
+
+
+        </table> -->
+
+   <br>
+
+        <h2>Predicted Result: {{ p }}</h2>
+
+    {% endif %}
+
+
+
+
+
+
+</form>
+
+<script src="/static/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#song').bind('change', function() {
+            //this.files[0].size gets the size of your file.
+            var val=$('#song').val().toLowerCase();
+            var regex=new RegExp("(.*?)\.(wav)$");
+            if(val==''){
+              alert("no file selected");
+               event.preventDefault();
+          } else if(!(regex.test(val))){
+              alert("Selected file not WAV..");
+              $('.uploadExtensionError').show();
+              $('#song').val('');
+              event.preventDefault();
+          }
+
+        });
+    });
+</script>
+
+
+</body>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+<body> 
+<form action="" method="get">
+<div align="center">
+  <table width="500" height="100" border="2" bordercolor="#000000" class="table table-bordered">
+    <thead class="thead-light">
+    <tr>
+        <th><em><font color="black">Date</font></em></th>
+      <th><em>Name</em></th>
+      <th><em>Email</em></th>
+      <th><em>Feedback</em></th>
+
+    </tr>
+    </thead>
+      {% for i in data %}
+    <tr>
+      <td>{{ i['create_at'] }}</td>
+      <td>{{ i['fname'] }}</td>
+      <td>{{ i['email'] }}</td>
+      <td>{{ i['feedback'] }}</td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+</body>
+{% endblock %}

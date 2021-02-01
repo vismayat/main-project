@@ -1,0 +1,34 @@
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+
+<body>
+<form action="/pchange" method="post">
+
+    <table  bordercolor="#000000" class="table table-bordered">
+
+      <tr>
+          <th>Current Password</th>
+        <td><input type="password" name="cpsw" id="cpsw" required class="form-control"  /> </td>
+      </tr>
+      <tr>
+          <th>New Password</th>
+        <td><input type="password" name="newpsw" id="newpsw" required class="form-control" pattern="[0-9]{5}"/>    </td>
+      </tr>
+      <tr>
+          <th>ConfirmPassword</th>
+        <td><input type="password" name="cpswd" id="cpswd" required  class="form-control"/>    </td>
+      </tr>
+      <tr>
+        <td colspan="2"><div align="center">
+          <input type="submit" name="psw" id="psw" value="Change Password" class="btn btn-success" style="padding: 4px 40px;" />
+        </div></td>
+      </tr>
+  </table>
+  </div>
+
+
+</form>
+</body>
+
+{% endblock %}

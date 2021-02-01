@@ -1,0 +1,46 @@
+
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+
+
+<!--<table width="500" height="100" border="0" bordercolor="#000000" class="table table-bordered">
+    <thead class="thead-light">
+    <tr>
+        <th>SlNo</th>
+        <th>Vector</th>
+        <th>Actal Result</th>
+        <th>Predicted Result</th>
+
+    </tr>
+    </thead>
+
+    {% for i in range(0,le) %}
+    <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ t[i] }}</td>
+    <td>{{ a[i] }}</td>
+    <td>{{ p[i] }}</td>
+
+    </tr>
+
+    {% endfor %}
+
+
+
+</table>-->
+
+
+<br>
+    <table class="table table-bordered">
+    <tr>
+        <td width="200">Dataset Accuracy</td>
+        <td><h2>{{ daccuracy }}</h2></td>
+    </tr>
+    </table>
+
+    <br>
+
+
+{% endblock %}
+

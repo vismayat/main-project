@@ -1,0 +1,43 @@
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+<body>
+<form action="" method="get">
+  <div align="center">
+    <table width="500" height="100" border="0" bordercolor="#000000" class="table table-bordered">
+      <thead class="thead-light">
+    <tr>
+
+        <th colspan="2"><div align="center"> <font color="black">My Profile</font></div></th>
+
+      </tr>
+    </thead>
+      <tr>
+          <td><font color="black"><div align="center"><strong>Firstname</strong></div></font></td>
+          <td> <div align="center">{{ data['fname'] }}</div></td>
+      </tr>
+      <tr>
+          <td><font color="black"><div align="center"><strong>Lastname</strong></div></font></td>
+          <td><div align="center">{{ data['lname'] }}</div></td>
+      </tr>
+      <tr>
+          <td><div align="center"><strong><font color="black">Gender</font></strong></div></td>
+          <td><div align="center">{{ data['gender'] }}</div></td>
+      </tr>
+      <tr>
+          <td><div align="center"><font color="black"><strong>DOB</strong></font></td>
+          <td><div align="center">{{ data['dob'] }}</div></td>
+      </tr>
+      <tr>
+          <td><font color="black"><div align="center"><strong>Email</strong></div></font></td>
+          <td><div align="center">{{ data['email']}}</div></td>
+      </tr>
+  </table>
+  </div>
+
+
+</form>
+
+
+</body>
+{% endblock %}

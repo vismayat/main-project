@@ -1,0 +1,40 @@
+
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+<body>
+<form action="/adm_reply_post" method="post">
+  <div align="center">
+    <table width="500" height="100" border="2" bordercolor="#000000" class="table table-bordered">
+
+      <tr>
+          <th><em><font color="black">Subject</font></em></th>
+        <td>&nbsp;{{ data['subject'] }}</td>
+      </tr>
+
+      <tr>
+        <th><em>Complaint</em></th>
+        <td>{{ data['complaint'] }}&nbsp;</td>
+      </tr>
+
+      <tr>
+        <th><em>Reply</em></th>
+        <td><em>
+        <textarea name="r" id="r" cols="45" rows="5" required ></textarea>
+        </em></td>
+      </tr>
+      <tr>
+        <td colspan="2"><div align="right">
+          <em>
+          <input type="submit" name="button" id="button" value="Reply" class="btn btn-success" style="padding: 4px 40px;" />
+        </em></div></td>
+      </tr>
+{#        {% endfor %}#}
+
+  </table>
+  </div>
+
+
+</form>
+</body>
+{% endblock %}

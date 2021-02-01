@@ -1,0 +1,60 @@
+
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+<table class="table table-bordered">
+
+<tr>
+    <th>chroma_stft</th>
+    <th>spectral_centroid</th>
+    <th>spectral_bandwidth</th>
+    <th>rolloff</th>
+    <th>zero_crossing_rate</th>
+    <th>mfcc1</th>
+    <th>mfcc2</th>
+    <th>mfcc3</th>
+    <th>mfcc4</th>
+    <th>mfcc5</th>
+    <th>mfcc6</th>
+    <th>mfcc7</th>
+    <th>mfcc8</th>
+    <th>mfcc9</th>
+    <th>mfcc10</th>
+    <th>mfcc11</th>
+    <th>mfcc12</th>
+    <th>mfcc13</th>
+    <th>mfcc14</th>
+    <th>mfcc15</th>
+    <th>mfcc16</th>
+    <th>mfcc17</th>
+    <th>mfcc18</th>
+    <th>mfcc19</th>
+    <th>mfcc20</th>
+    <th>Lable</th>
+
+
+
+</tr>
+
+   {% for i in c %}
+       <tr>
+
+       {% for a in i %}
+
+           <td> {{ a }}</td>
+
+
+
+           {% endfor %}
+
+
+       </tr>
+
+    {% endfor %}
+
+
+</table>
+
+
+
+{% endblock %}

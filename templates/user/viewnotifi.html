@@ -1,0 +1,26 @@
+
+{% extends 'user/user_panel.html' %}
+{% block body %}
+
+<body>
+<form action="" method="get">
+
+<table width="500" height="100" border="0" bordercolor="#000000" class="table table-borderless">
+    <thead class="thead-light">
+  </tr>
+  <tr>
+      <th><font color="black">Date</font></th>
+      <th><font color="black">Notification</font></td>
+  </tr>
+    </thead>
+    {% for i in data %}
+  <tr>
+    <td>{{ i['create_at'] }}</td>
+    <td>{{ i['notification'] }}</td>
+
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

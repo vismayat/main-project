@@ -1,0 +1,32 @@
+
+
+{% extends 'admin/admin_panel.html' %}
+{% block body %}
+
+<body> 
+<form action="/adm_noty_post" method="post">
+
+  <div align="center">
+    <p>&nbsp;</p>
+    <table width="500" height="100" border="0" bordercolor="#000000" class="table table-borderless">
+
+      <tr>
+        <td><em><strong>Notification</strong></em></td>
+        <td><textarea name="fb" id="fb" cols="45" rows="5" required class="form-control" placeholder="notification"></textarea></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><div align="center">
+          <p>
+            <input type="submit" name="send" id="send" value="Send" class="btn btn-success" style="padding: 4px 40px;""/>
+          </p>
+        </div></td>
+      </tr>
+  </table>
+  </div>
+
+
+</form>
+</body>
+
+{% endblock %}
